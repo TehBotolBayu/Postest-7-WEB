@@ -1,0 +1,20 @@
+.profile{
+    margin: 5% auto;
+    width: 50%;
+}
+#n{
+    width: 50%;
+    margin: 0 auto;
+}
+#edit{
+    background: rgb(115, 199, 255);
+    color: white;
+    text-align: center;
+    width: 20%;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+footer{
+    height: 20%;
+}

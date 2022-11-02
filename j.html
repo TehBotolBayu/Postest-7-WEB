@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<body>
+    <form >
+        nama: <input type="text" id="name" name="nama">
+
+        <button onclick="f()">hgvnb</button>
+    </form>
+    <script>
+    
+        function f(){
+            var a = document.getElementById("name").value;
+            sessionStorage.setItem("url", a);
+            
+        }
+        var n = sessionStorage.getItem("url"); alert(n);
+    </script>
+</body>

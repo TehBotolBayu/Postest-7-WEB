@@ -1,0 +1,797 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Calibri;
+	scroll-behavior: smooth;
+}
+
+.cari{
+	margin-top: 50px;
+	margin-left: 20px;
+}
+.sub{
+	display: inline-block;
+}
+input[type=text], select {
+	
+	width: 50%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+  }
+  
+  input[type=submit] {
+	width: 50px%;
+	background-color: rgb(115, 199, 255);
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+  }
+#welcome{
+	display: none;
+}
+#start{
+	display: none;
+}
+input[type=checkbox]{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+	}
+
+	#lbl {
+	cursor: pointer;
+	text-indent: -9999px;
+	width: 50px;
+	height: 30px;
+	background: grey;
+	display: block;
+	border-radius: 100px;
+	position: relative;
+	}
+
+	#lbl:after {
+	content: '';
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	width: 20px;
+	height: 20px;
+	background: #fff;
+	border-radius: 90px;
+	transition: 0.3s;
+	}
+
+	input:checked + #lbl {
+	background: #fff;
+	}
+
+	input:checked + #lbl:after {
+	left: calc(100% - 5px);
+	transform: translateX(-100%);
+	background: grey;
+	}
+	
+	#lbl:active:after {
+	width: 40px;
+	}
+	
+	#lbl, #switch{
+		position: absolute;
+		left: 80%;
+
+	}
+	
+header{
+	height: 100%;
+	position: sticky;
+	top: 0;
+	background-color: #fff;
+	box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.3);
+	z-index: 200;
+	border-bottom: 2px solid rgb(115, 199, 255);
+}
+header div{
+	display: flex;
+	height: 60px;
+}
+header div p{
+	display: inline;
+	font-family: TimesNewRoman;
+	font-weight: bold;
+	font-size: 200%;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	
+}
+header div label{
+	font-size: 200%;
+	height: 100%;
+	width: 60px;
+	line-height: 60px;
+	text-align: center;
+	cursor: pointer;
+	transition: .5s ease;
+}
+header div label:hover{
+	color: #fff;
+	background: rgb(115, 199, 255);
+}
+input[type=checkbox]{
+	display: none;
+}
+header nav{
+	position: absolute;
+	top: 60px;
+	height: 100vh;
+	width: 0px;
+	background: #fff;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+	overflow: hidden;
+	transition: .5s ease;
+	z-index: 2;
+}
+header nav ul li a{
+	display: flex;
+	align-items: center;
+	font-size: 200%;
+	color: #000;
+	text-decoration: none;
+	text-transform: capitalize;
+	padding: 10px 30px;
+	height: 100%;
+	width: 100%;
+	transition: .5s ease;
+
+}
+header nav ul li a:hover{
+	background: rgb(115, 199, 255);
+	color: #fff;
+	border-right: 5px solid white;
+	.z{
+		color: red;
+	}
+}
+
+input[type=checkbox]:checked ~ nav{
+	width: 50%;
+}
+.intro h1{
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+	background-color: rgb(115, 199, 255);
+}
+.bg{
+	background-image:  linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5), white 109%), 
+	url("asset/1621058999_41-pibig_info-p-bali-ostrov-priroda-krasivo-foto-41.jpg");
+	
+	height: 70vh;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	
+}
+.bg>h1{
+	color: white;
+	text-align: center;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 40px;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.bg h1 a{
+	text-decoration: none;
+	color: white;
+	font-size: 0.5em;
+	position: absolute;
+	left: 50%;
+	top: 150%;
+	transform: translate(-50%);
+	border: 3px solid white;
+	border-radius: 30px;
+	padding: 10px;
+}
+.bg h1 a:hover{
+	color: black;
+	background-color: white;
+	transition: .3s ease;
+}
+.intro ul{
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
+}
+.intro ul li{
+	display: inline;
+	margin-left: 50px;
+}
+.intro ul li a{
+	text-decoration: none;
+}
+.navcard{
+	background-color: rgba(255,255,255, 0.8);
+	position: absolute;
+	height: 10em;
+	width: 70%;
+	top: 70vh;
+	left: 50%;
+	transform: translate(-50%);
+	border-radius: 20px;
+	box-shadow: 0px 15px 20px 0 rgba(0, 0, 0, 0.3);
+	border: 3px solid rgba(0, 0, 0, 0.3);
+	display: flex;
+	flex-wrap: nowrap;
+	padding: 20px;
+}
+.navcard a{
+	flex-grow: 1;
+	padding: 10px;
+	text-align: center;
+	text-decoration: none;
+	color: black;
+	font-size: 20px;
+}
+.navcard a:hover{
+	font-weight: bold;
+}
+.navcard a:hover img{
+	transform: translate(0, -10%);
+	transition: .3s ease;
+}
+#overview{
+	padding: 80px 140px;
+	margin: 150px 0;
+	text-align: center;
+	font-size: 20px;
+}
+.collage{
+	background-image:  linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5), white 109%), 
+	url("asset/collage.png");
+	height: 500px;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	
+}
+.collage .text{
+	color: white;
+	text-align: center;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	padding-left: 10%;
+	padding-right: 10%;
+	transform: translate(-50%, -50%);
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-size: 20px;
+}
+#history{
+	background-image: linear-gradient(to right, rgba(255, 255, 255, 1) 40%, rgba(255, 255, 255, 0)), 
+	url("asset/h1.jpg");
+	height: 500px;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+#history2{
+	background-image: linear-gradient(to left, rgba(255, 255, 255, 1) 40%, rgba(255, 255, 255, 0)), 
+	url("asset/h3.jpg");
+	height: 500px;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;	
+}
+#history #text1{
+	width: 50%;
+	color: black;
+	text-align: left;
+	position: relative;
+	top: 50%;
+	padding-left: 50px;
+	transform: translate(0%, -50%);
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-size: 20px;
+}
+#history2 #text2{
+	width: 50%;
+	color: black;
+	text-align: right;
+	position: relative;
+	top: 50%;
+	left: 70%;
+	transform: translate(-50%, -50%);
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-size: 20px;
+}
+#Destination{
+	background: linear-gradient(to bottom right, rgb(115, 199, 255), rgb(214, 249, 255));
+	/* linear-gradient(to bottom right, rgb(92, 32, 129) 10%, rgb(0, 119, 255)) */
+	margin: 0px 0 0;
+	padding: 6em 1em 1em;
+}
+.title{
+	color: white;
+	margin-bottom: 1em;
+	text-align: center;
+	font-size: 2em;
+}
+.destination{
+	display: flex;
+	flex-wrap: nowrap;
+	overflow-x: auto;
+	width: 80%;
+	margin: 0 auto 5em;
+}
+
+.destination .card{
+	margin: 1.3em;
+	padding-left: 15px;
+	padding-right: 15px;
+	background-size: cover;
+	height: 18em;
+	width: 12em;
+	background-repeat: no-repeat;
+	border-radius: 30px;
+	border: 2px solid rgba(0, 0, 0, 0);
+}
+
+.destination .borobudur{
+	background-image: url("asset/borobudur.jpg");
+}
+.destination .raja{
+	background-image: url("asset/rajaampat.jpg");
+}
+.destination .kakaban{
+	background-image: url("asset/kakaban.jpg");
+}
+.destination .ubud{
+	background-image: url("asset/ubud.jpg");
+}
+.destination .komodo{
+	background-image: url("asset/komodo.jpg");
+}
+.destination .bunaken{
+	background-image: url("asset/bunaken.jpg");
+}
+.destination .luweng{
+	background-image: url("asset/luweng.jpg");
+}
+.destination .jaya{
+	background-image: url("asset/jayawijaya.jpeg");
+}
+.destination .toba{
+	background-image: url("asset/toba.jpeg");
+}
+.destination .jakarta{
+	background-image: url("asset/jakarta.jpg");
+}
+.destination .surabaya{
+	background-image: url("asset/surabaya.jpg");
+}
+.destination .bukit{
+	background-image: url("asset/bukit.jpg");
+}
+.destination .bandung{
+	background-image: url("asset/bandung.jpg");
+}
+.destination .denpasar{
+	background-image: url("asset/denpasar.jpg");
+}
+.destination .balikpapan{
+	background-image: url("asset/balikpapan.png");
+}
+.destination .manado{
+	background-image: url("asset/manado.jpg");
+}
+.destination .makassar{
+	background-image: url("asset/makassar.jpg");
+}
+.destination .yogya{
+	background-image: url("asset/yogya.jpg");
+}
+.destination .card p{
+	text-align: left;
+	font-size: 1.5em;
+	font-weight: bold;
+	margin: 90% auto 0;
+	color: white;
+}
+.destination .card .loc{
+	color: white;
+	font-size: 1em;
+}
+.destination .card .loc td{
+	padding-right: 10px;
+}
+
+.destination .borobudur:hover{
+	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+	url("asset/borobudur.jpg");
+}
+.destination .raja:hover{
+	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+	url("asset/rajaampat.jpg");
+}
+.destination .kakaban:hover{
+	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+	url("asset/kakaban.jpg");
+}
+.destination .ubud:hover{
+	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+	url("asset/ubud.jpg");
+}
+.destination .komodo:hover{
+	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+	url("asset/komodo.jpg");
+}
+.destination .bunaken:hover{
+	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+	url("asset/bunaken.jpg");
+}
+.destination .luweng:hover{
+	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+	url("asset/luweng.jpg");
+}
+.destination .jaya:hover{
+	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+	url("asset/jayawijaya.jpeg");
+}
+.destination .toba:hover{
+	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+	url("asset/toba.jpeg");
+}
+.destination .jakarta:hover{
+	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+	url("asset/jakarta.jpg");
+}
+.destination .surabaya:hover{
+	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+	url("asset/surabaya.jpg");
+}
+.destination .bukit:hover{
+	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+	url("asset/bukit.jpg");
+}
+.destination .bandung:hover{
+	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+	url("asset/bandung.jpg");
+}
+.destination .denpasar:hover{
+	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+	url("asset/denpasar.jpg");
+}
+.destination .balikpapan:hover{
+	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+	url("asset/balikpapan.png");
+}
+.destination .manado:hover{
+	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+	url("asset/manado.jpg");
+}
+.destination .makassar:hover{
+	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+	url("asset/makassar.jpg");
+}
+.destination .yogya:hover{
+	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+	url("asset/yogya.jpg");
+}
+
+.destination .card:hover>p{
+	transform: translate(0, -20%);
+	transition: .5s ease;
+}
+.destination .card:hover td{
+	font-weight: bold;
+}
+.newsintro{
+	padding: 6em 10%;
+	text-align: center;
+	font-size: 20px;
+}
+.column{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 50%;
+	border: 2px solid white;
+	margin: 0 auto;
+}
+.row{
+	display: flex;
+	flex-direction: row;
+	flex-grow: 1;
+	flex-basis: 100%;
+	text-align: center;
+}
+.box{
+	flex-grow: 1;
+	border: 2px solid white;
+	color: white;
+	font-size: 1em;
+	text-align: left;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.box p{
+	text-align: left;
+	font-size: 120%;
+	font-weight: bold;
+	margin: 10em 1em 0;
+	color: white;
+}
+.box:hover p{
+	transform: translate(0, -20%);
+	transition: .5s ease;
+}
+.N1{
+	background-image: url("asset/n1.jpg");
+}.N1:hover{
+	background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3), white 110%), url("asset/n1.jpg");
+}
+.N2{
+	background-image: url("asset/n2.jpg"); 
+}.N2:hover{
+	background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3), white 110%), url("asset/n2.jpg");
+}
+.N3{
+	background-image: url("asset/n3.jpg"); 
+}.N3:hover{
+	background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3), white 110%), url("asset/n3.jpg");
+}
+.N4{
+	background-image: url("asset/n4.jpg"); 
+}.N4:hover{
+	background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3), white 110%), url("asset/n4.jpg");
+}
+.N5{
+	background-image: url("asset/n5.jpg"); 
+}.N5:hover{
+	background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3), white 110%), url("asset/n5.jpg");
+}
+#News{
+	margin-bottom: 2em;
+}
+#AboutMe{
+	margin-top: 50px;
+	text-align: center;
+}
+aside{
+	margin-top: 2em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.profile .image{
+	height: 140px;
+	width: 140px;
+	border-radius: 50%;
+	padding: 3px;
+	background: rgb(115, 199, 255);
+}
+.profile .image img{
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	border-radius: 50%;
+	border: 3px solid white;
+}
+.profile{
+	position: relative;
+	background-color: #fff;
+	border-radius: 20px;
+	margin: 20px 0;
+	box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.5);
+}
+.profile::before{
+	content: "";
+	position: absolute;
+	height: 40%;
+	width: 100%;
+	background-color: rgb(115, 199, 255);
+	border-radius: 20px 20px 0 0;
+}
+.profile-content{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 30px;
+	position: relative;
+	z-index: 100;
+}
+.icon{
+	position: absolute;
+	top: 10px;
+	right: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.icon img{
+	color:#fff;
+	margin-top: 10px;
+	opacity: 0.6;
+	
+}
+.icon img:hover{
+	cursor: pointer;
+	opacity: 1;
+	transition: all 0.2s ease;
+}
+.identity{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 10px;
+}
+.profile:hover{
+	transform: translate(0, -5%);
+	transition: .5s ease;
+}
+footer{
+	margin-top: 2em;
+	height: 10em;
+}
+footer hr{
+	border-top: 2px solid rgb(115, 199, 255);
+}
+footer p{
+	text-align: center;
+	position: relative;
+	top: 50%;
+}
+@media only screen and (max-width: 500px){
+	.row{
+		flex-direction: column;
+	}
+	input[type=checkbox]:checked ~ nav{
+		width: 100%;
+	}
+	.navcard{
+		width: 100%;
+	}
+	#overview{
+		padding: 10px;
+	}
+	.profile{
+		font-size: 10px;
+	}
+	.profile .image{
+		height: 90px;
+		width: 90px;
+	}
+	.destination .card{
+		height: 11em;
+		width: 8em;
+	}
+	.destination .card p{
+		font-size: 1em;
+	}
+	.destination .card .loc{
+		font-size: 0.7em;
+	}
+}
+@media only screen and (max-width: 300px){
+	.navcard img{
+		width: 50px;
+		height: 50px;
+	}
+	.navcard a{
+		font-size: 10px;
+		padding: 0px;
+	}
+}
+.darkbg{
+	background-color: rgb(44, 44, 44);
+}
+.darkfont{
+	color: white;
+}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+.mySlides img {
+	vertical-align: middle;
+	height: 400px;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 40px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  font-weight: bolder;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 20px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
